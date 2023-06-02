@@ -30,9 +30,9 @@ export default class Experience extends EventEmitter {
 
     // Renderer
     this.rendererInstance = new THREE.WebGLRenderer({
-      // alpha: false,
+      alpha: false,
       antialias: true,
-      // stencil: false,
+      stencil: false,
       powerPreference: "high-performance",
     });
 

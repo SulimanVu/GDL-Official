@@ -4,7 +4,7 @@ import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
 import { EXRLoader } from "three/addons/loaders/EXRLoader.js";
-// import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js'
+import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js'
 
 export default class Resources extends EventEmitter {
   /**
@@ -46,22 +46,22 @@ export default class Resources extends EventEmitter {
       },
     });
 
-    // // Basis images
-    // const ktx2Loader = new KTX2Loader()
-    // ktx2Loader.setTranscoderPath('basis/')
-    // ktx2Loader.detectSupport(this.rendererInstance)
+    // Basis images
+    const ktx2Loader = new KTX2Loader()
+    ktx2Loader.setTranscoderPath('basis/')
+    ktx2Loader.detectSupport(this.rendererInstance)
 
-    // this.loaders.push({
-    //     extensions: ['basis', 'ktx2'],
-    //     action: (_resource) =>
-    //     {
-    //         ktx2Loader.load(_resource.source, (_data) =>
-    //         {
-    //             console.log(_data)
-    //             this.fileLoadEnd(_resource, _data)
-    //         })
-    //     }
-    // })
+    this.loaders.push({
+        extensions: ['basis', 'ktx2'],
+        action: (_resource) =>
+        {
+            ktx2Loader.load(_resource.source, (_data) =>
+            {
+                console.log(_data)
+                this.fileLoadEnd(_resource, _data)
+            })
+        }
+    })
 
     // Draco
     const dracoLoader = new DRACOLoader();

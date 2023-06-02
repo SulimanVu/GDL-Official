@@ -24,7 +24,7 @@ export default class Model {
 
     this.models = _models;
     this.name = _name;
-    this.hideDistance = 6;
+    this.hideDistance = 10;
     this.shown = false;
     this.onScreen = false;
 
@@ -44,8 +44,8 @@ export default class Model {
     this.position = { x: 0, y: -this.hideDistance, z: 0 };
     this.rotation = { x: 0, y: 0 };
 
-    this.olaPosition = Ola({ ...this.position }, 500);
-    this.olaRotation = Ola({ ...this.rotation }, 500);
+    this.olaPosition = Ola({ ...this.position }, 1000);
+    this.olaRotation = Ola({ ...this.rotation }, 1000);
 
     this.autoRotate = true;
 
@@ -89,7 +89,7 @@ export default class Model {
       new THREE.CircleGeometry(0.25, 32),
       new THREE.MeshBasicMaterial({ color: 0xffffff })
     );
-    // this.groupB.add(this.placeholder.mesh)
+    this.groupB.add(this.placeholder.mesh);
   }
 
   setFocusPoint() {
@@ -106,7 +106,7 @@ export default class Model {
       new THREE.BoxGeometry(0.25, 0.25, 0.25),
       new THREE.MeshBasicMaterial({ color: "red", wireframe: true })
     );
-    // this.focusPoint.object.add(this.focusPoint.dummy)
+    this.focusPoint.object.add(this.focusPoint.dummy);
 
     // Element
     this.focusPoint.element = document.querySelector(
@@ -461,7 +461,8 @@ export default class Model {
     if (!debug.active) return;
     // General
     const folder = debug.ui.getFolder(`models/${this.name}`);
-    // folder.open()
+    folder.open();
+
     folder
       .addColor(this.materials.stickerScout, "color")
       .name("stickerScoutColor");
@@ -630,8 +631,8 @@ export default class Model {
       // Permanent rotation
       if (this.autoRotate && this.boxModel) {
         this.boxModel.rotation.y =
-          Math.sin(this.time.elapsed * 0.654 * 0.5) *
-          Math.sin(this.time.elapsed * 0.789 * 0.5) *
+          Math.sin(this.time.elapsed * 0.654) *
+          Math.sin(this.time.elapsed * 0.789) *
           0.15;
         this.boxModel.rotation.x =
           Math.PI * 0.45 +
@@ -682,17 +683,26 @@ export default class Model {
         this.materials.bulbGlow.uniforms.uFresnelScale.value =
           1.5 + (Math.random() - 0.5) * 0.4;
       }
-
+      //
+      //
+      //
+      //
+      //
+      //
+      //
       // // Focus point
-      // const screenPosition = new THREE.Vector3()
-      // this.focusPoint.object.getWorldPosition(screenPosition)
+      const screenPosition = new THREE.Vector3();
+      this.focusPoint.object.getWorldPosition(screenPosition);
 
-      // screenPosition.project(this.camera.instance)
-      // screenPosition.x = (screenPosition.x * 0.5 + 0.5) * this.viewport.elementWidth
-      // screenPosition.y = this.viewport.elementHeight - (screenPosition.y * 0.5 + 0.5) * this.viewport.elementHeight
+      screenPosition.project(this.camera.instance);
+      screenPosition.x =
+        (screenPosition.x * 0.5 + 0.5) * this.viewport.elementWidth;
+      screenPosition.y =
+        this.viewport.elementHeight -
+        (screenPosition.y * 0.5 + 0.5) * this.viewport.elementHeight;
 
-      // screenPosition.x = Math.round(screenPosition.x * 10) / 10
-      // screenPosition.y = Math.round(screenPosition.y * 10) / 10
+      screenPosition.x = Math.round(screenPosition.x * 10) / 10;
+      screenPosition.y = Math.round(screenPosition.y * 10) / 10;
 
       // this.focusPoint.element.style.top = `${screenPosition.y}px`
       // this.focusPoint.element.style.left = `${screenPosition.x}px`

@@ -167,7 +167,7 @@ export default class Model {
 
     // General
     const folder = debug.ui.getFolder("environmentMap");
-    folder.open()
+    folder.open();
 
     const choices = {};
     if (this.resources.items.environmentMap)

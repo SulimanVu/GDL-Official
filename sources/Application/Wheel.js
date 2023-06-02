@@ -41,7 +41,7 @@ export default class Wheel extends EventEmitter {
     if (this.triggered && _direction) {
       // console.log("triggeredByDirection", triggeredByDirection);
       // console.log("triggeredByIdle", triggeredByIdle);
-      console.log("triggeredByIncrease", triggeredByIncrease);
+      // console.log("triggeredByIncrease", triggeredByIncrease);
 
       this.onWheel(_direction);
 
