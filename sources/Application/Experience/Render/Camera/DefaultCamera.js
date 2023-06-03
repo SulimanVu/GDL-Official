@@ -8,7 +8,7 @@ export default class DefaultCamera {
     this.active = false;
 
     this.instance = this.baseInstance.clone();
-    this.instance.position.set(0, -2, 45);
+    this.instance.position.set(0, -0, 45);
     this.instance.rotation.reorder("YXZ");
   }
 
@@ -20,5 +20,5 @@ export default class DefaultCamera {
     this.active = false;
   }
 
-  destroy() {}
+  destroy() { }
 }

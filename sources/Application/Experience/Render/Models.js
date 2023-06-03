@@ -103,8 +103,8 @@ export default class Models {
      * Iridescents
      */
     const stickerCornerIridescent = new Iridescent({
-    //   debugPath: `models/materials/stickerCorner`,
-    //   texture: this.textures.stickerOnscout,
+      //   debugPath: `models/materials/stickerCorner`,
+      //   texture: this.textures.stickerOnscout,
       color: "#ffffff",
       iridescentColor: "#7a7a7a",
       metalness: 1,

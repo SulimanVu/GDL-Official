@@ -110,14 +110,14 @@ export default class Navigation {
     this.sectionsElement = document.querySelector(".js-sections");
 
     this.sections = [
-      {
-        name: "intro",
-        canFocus: false,
-        element: sectionElements.find((_element) =>
-          _element.classList.contains("is-intro")
-        ),
-        model: this.render.models.items.get("crew"),
-      },
+      // {
+      //   name: "intro",
+      //   canFocus: false,
+      //   element: sectionElements.find((_element) =>
+      //     _element.classList.contains("is-intro")
+      //   ),
+      //   model: this.render.models.items.get("intro"),
+      // },
       {
         name: "crew",
         color: "a48bff",
