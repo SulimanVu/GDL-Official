@@ -74,24 +74,18 @@ export default class Models {
 
   setTextures() {
     // this.textures = {};
-
     // this.textures.stickerScout = this.resources.items.stickerScoutTexture;
     // this.textures.stickerSide = this.resources.items.stickerSideTexture;
     // this.textures.stickerSmiley = this.resources.items.stickerSmileyTexture;
     // this.textures.stickerOnscout = this.resources.items.stickerOnscoutTexture;
-
     // for (const _textureKey in this.textures) {
     //   const texture = this.textures[_textureKey];
-
     //   texture.minFilter = THREE.LinearMipmapLinearFilter;
     //   texture.magFilter = THREE.LinearFilter;
-
     //   texture.wrapS = THREE.ClampToEdgeWrapping;
     //   texture.wrapT = THREE.ClampToEdgeWrapping;
-
     //   texture.flipY = false;
     // }
-
     // this.textures.stickerScout.anisotropy = 4;
     // this.textures.stickerSide.anisotropy = 4;
   }
@@ -103,8 +97,8 @@ export default class Models {
      * Iridescents
      */
     const stickerCornerIridescent = new Iridescent({
-    //   debugPath: `models/materials/stickerCorner`,
-    //   texture: this.textures.stickerOnscout,
+      //   debugPath: `models/materials/stickerCorner`,
+      //   texture: this.textures.stickerOnscout,
       color: "#ffffff",
       iridescentColor: "#7a7a7a",
       metalness: 1,
@@ -170,7 +164,7 @@ export default class Models {
 
     // General
     const folder = debug.ui.getFolder(`models`);
-    folder.open()
+    folder.open();
 
     folder.add(this, "wireframe").onChange(() => {
       this.scene.traverse((_child) => {
@@ -184,7 +178,7 @@ export default class Models {
     const plasticCoverMaterialfolder = debug.ui.getFolder(
       `models/materials/plasticCover`
     );
-    plasticCoverMaterialfolder.open()
+    plasticCoverMaterialfolder.open();
 
     plasticCoverMaterialfolder
       .addColor(this.materials.plasticCover, "color")
@@ -218,7 +212,8 @@ export default class Models {
       const ratio = this.viewport.width / this.viewport.height;
       this.groupB.position.x = this.offset.value * ratio;
 
-      this.groupC.position.y = 0;
+      this.groupC.position.y = -2;
+      // this.groupC.position.y = 0;
     }
 
     this.groupC.rotation.y = this.offset.value * this.offset.rotationMultiplier;

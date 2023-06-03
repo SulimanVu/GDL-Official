@@ -106,7 +106,7 @@ export default class Model {
       new THREE.BoxGeometry(0.25, 0.25, 0.25),
       new THREE.MeshBasicMaterial({ color: "red", wireframe: true })
     );
-    this.focusPoint.object.add(this.focusPoint.dummy);
+    // this.focusPoint.object.add(this.focusPoint.dummy);
 
     // Element
     this.focusPoint.element = document.querySelector(
@@ -391,6 +391,7 @@ export default class Model {
 
     this.boxModel.rotation.order = "YXZ";
     this.boxModel.rotation.x = Math.PI * 0.4;
+    this.boxModel.rotation.y = Math.PI * 0.4;
     this.groupB.add(this.boxModel);
 
     this.boxModel.traverse((_child) => {
