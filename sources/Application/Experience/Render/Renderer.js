@@ -40,7 +40,7 @@ export default class Renderer {
     this.instance.domElement.style.width = "100%";
     this.instance.domElement.style.height = "100%";
 
-    this.instance.setClearColor(0x414141, 1)
+    this.instance.setClearColor(0x414141, 1);
     this.instance.setClearColor(this.clearColor, 1);
     this.instance.setSize(
       this.viewport.elementWidth,
@@ -49,10 +49,10 @@ export default class Renderer {
     this.instance.setPixelRatio(this.viewport.clampedPixelRatio);
 
     this.instance.physicallyCorrectLights = true;
-    this.instance.outputEncoding = THREE.sRGBEncoding
+    this.instance.outputEncoding = THREE.sRGBEncoding;
     this.instance.shadowMap.enabled = this.experience.quality === "high";
-    this.instance.shadowMap.type = THREE.PCFSoftShadowMap
-    this.instance.toneMapping = THREE.CineonToneMapping
+    this.instance.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.instance.toneMapping = THREE.CineonToneMapping;
     this.instance.toneMapping = THREE.ACESFilmicToneMapping;
     this.instance.toneMappingExposure = 2.1;
 
@@ -98,12 +98,17 @@ export default class Renderer {
     );
     this.postProcess.unrealBloomPass.enabled = true;
 
-    this.postProcess.unrealBloomPass.tintColor = {}
-    this.postProcess.unrealBloomPass.tintColor.value = '#7f00ff'
-    this.postProcess.unrealBloomPass.tintColor.instance = new THREE.Color(this.postProcess.unrealBloomPass.tintColor.value)
+    this.postProcess.unrealBloomPass.tintColor = {};
+    this.postProcess.unrealBloomPass.tintColor.value = "#7f00ff";
+    this.postProcess.unrealBloomPass.tintColor.instance = new THREE.Color(
+      this.postProcess.unrealBloomPass.tintColor.value
+    );
 
-    this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintColor = { value: this.postProcess.unrealBloomPass.tintColor.instance }
-    this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintStrength = { value: 0.15 }
+    this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintColor = {
+      value: this.postProcess.unrealBloomPass.tintColor.instance,
+    };
+    this.postProcess.unrealBloomPass.compositeMaterial.uniforms.uTintStrength =
+      { value: 0.15 };
     this.postProcess.unrealBloomPass.compositeMaterial.fragmentShader = `
 varying vec2 vUv;
 uniform sampler2D blurTexture1;
@@ -177,7 +182,7 @@ void main() {
         minFilter: THREE.LinearFilter,
         magFilter: THREE.LinearFilter,
         format: THREE.RGBAFormat,
-        encoding: THREE.sRGBEncoding
+        encoding: THREE.sRGBEncoding,
       }
     );
     this.postProcess.composer = new EffectComposer(
@@ -191,8 +196,8 @@ void main() {
     this.postProcess.composer.setPixelRatio(this.viewport.clampedPixelRatio);
 
     this.postProcess.composer.addPass(this.postProcess.renderPass);
-    this.postProcess.composer.addPass(this.postProcess.taaRenderPass)
-    this.postProcess.composer.addPass(this.postProcess.unrealBloomPass)
+    this.postProcess.composer.addPass(this.postProcess.taaRenderPass);
+    this.postProcess.composer.addPass(this.postProcess.unrealBloomPass);
     this.postProcess.composer.addPass(this.postProcess.finalPass);
   }
 
@@ -238,9 +243,9 @@ void main() {
 
     if (!debug.active) return;
 
-    General
+    General;
     const folder = debug.ui.getFolder("renderer");
-    folder.open()
+    folder.open();
 
     folder
       .addColor(this, "clearColor")
@@ -286,10 +291,9 @@ void main() {
         "Level 5: 32 Samples": 5,
       })
       .name("sampleLevel")
-    .onFinishChange(() =>
-    {
+      .onFinishChange(() => {
         this.postProcess.taaRenderPass.sampleLevel = param.TAASampleLevel;
-    })
+      });
 
     // Unreal Bloom pass
     const unrealBloomPassFolder = debug.ui.getFolder(
@@ -314,7 +318,7 @@ void main() {
       .max(3)
       .name("threshold");
 
-    console.log(this.postProcess.unrealBloomPass.strength)
-    console.log(this.postProcess.unrealBloomPass.radius)
+    console.log(this.postProcess.unrealBloomPass.strength);
+    console.log(this.postProcess.unrealBloomPass.radius);
   }
 }

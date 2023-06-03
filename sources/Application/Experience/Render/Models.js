@@ -56,10 +56,10 @@ export default class Models {
   setOffset() {
     this.offset = {};
     this.offset.value = 0;
-    this.offset.rotationMultiplier = -0.3;
+    this.offset.rotationMultiplier = -0.1;
 
     this.offset.go = () => {
-      gsap.to(this.offset, { value: -1, duration: 0.7, ease: "power2.inOut" });
+      gsap.to(this.offset, { value: -2, duration: 1, ease: "power2.inOut" });
     };
 
     this.offset.leave = () => {
