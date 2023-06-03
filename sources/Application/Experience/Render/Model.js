@@ -92,7 +92,7 @@ export default class Model {
     this.groupB.add(this.placeholder.mesh);
   }
 
-// Не трогать/ ни на что не влияет
+  // Не трогать/ ни на что не влияет
   setFocusPoint() {
     this.focusPoint = {};
     this.focusPoint.screenPosition = new THREE.Vector2();
@@ -637,10 +637,10 @@ export default class Model {
           Math.sin(this.time.elapsed * 0.789) *
           0.15;
         this.boxModel.rotation.x =
-          Math.PI * 0.45 +
+          0.2 +
           Math.sin(this.time.elapsed * 0.456) *
-            Math.sin(this.time.elapsed * 0.123) *
-            0.07;
+          Math.sin(this.time.elapsed * 0.123) *
+          0.07;
       }
 
       // Cursor parallax

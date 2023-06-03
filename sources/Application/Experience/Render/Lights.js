@@ -20,8 +20,13 @@ export default class Lights {
   }
 
   setInstance() {
-    this.instance = new THREE.SpotLight(0xffffff, 25, 0, Math.PI / 1.5);
-    this.instance.position.set(2.90234, 5.81491, 3);
+    // Цвет свреху
+    this.instance = new THREE.SpotLight(0xffffff, 50, 100, 1.5);
+    this.instance.position.set(0, 7, 4);
+
+    // Цвет снизу
+    this.i = new THREE.SpotLight(0xffffff, 50, 100, 1.5);
+    this.i.position.set(0, -20, 20)
 
     this.instance.castShadow = true;
 
@@ -39,6 +44,7 @@ export default class Lights {
     this.instance.shadow.normalBias = 0.0;
 
     this.scene.add(this.instance);
+    this.scene.add(this.i);
     this.scene.add(this.instance.target);
   }
 
@@ -76,15 +82,15 @@ export default class Lights {
                     #ifdef USE_SHADOWMAP
 
                     #define LIGHT_WORLD_SIZE ${this.customShadow.parameters.lightSize.toFixed(
-                      3
-                    )}
+          3
+        )}
                     #define LIGHT_FRUSTUM_WIDTH ${this.customShadow.parameters.frustumWidth.toFixed(
-                      3
-                    )}
+          3
+        )}
                     #define LIGHT_SIZE_UV (LIGHT_WORLD_SIZE / LIGHT_FRUSTUM_WIDTH)
                     #define NEAR_PLANE ${this.customShadow.parameters.nearPlane.toFixed(
-                      3
-                    )}
+          3
+        )}
 
                     #define NUM_SAMPLES ${this.customShadow.parameters.samples}
                     #define NUM_RINGS ${this.customShadow.parameters.rings}
@@ -136,24 +142,21 @@ export default class Lights {
                         float sum = 0.0;
                         float depth;
                         #pragma unroll_loop_start
-                        for( int i = 0; i < ${
-                          this.customShadow.parameters.samples
-                        } ; i ++ ) {
+                        for( int i = 0; i < ${this.customShadow.parameters.samples
+        } ; i ++ ) {
                             depth = unpackRGBAToDepth( texture2D( shadowMap, uv + poissonDisk[ i ] * filterRadius ) );
                             if( zReceiver <= depth ) sum += 1.0;
                         }
                         #pragma unroll_loop_end
                         #pragma unroll_loop_start
-                        for( int i = 0; i < ${
-                          this.customShadow.parameters.samples
-                        } ; i ++ ) {
+                        for( int i = 0; i < ${this.customShadow.parameters.samples
+        } ; i ++ ) {
                             depth = unpackRGBAToDepth( texture2D( shadowMap, uv + -poissonDisk[ i ].yx * filterRadius ) );
                             if( zReceiver <= depth ) sum += 1.0;
                         }
                         #pragma unroll_loop_end
-                        return sum / ( 2.0 * float( ${
-                          this.customShadow.parameters.samples
-                        }  ) );
+                        return sum / ( 2.0 * float( ${this.customShadow.parameters.samples
+        }  ) );
                     }
 
                     float PCSS ( sampler2D shadowMap, vec4 coords ) {
