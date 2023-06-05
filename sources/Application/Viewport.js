@@ -17,8 +17,8 @@ export default class Viewport {
   }
 
   update() {
-    this.width = window.innerWidth;
-    this.height = window.innerHeight;
+    this.width = document.documentElement.clientWidth;
+    this.height = document.documentElement.clientHeight;
     this.smallestSide = this.width < this.height ? this.width : this.height;
     this.biggestSide = this.width > this.height ? this.width : this.height;
     this.pixelRatio = window.devicePixelRatio;

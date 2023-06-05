@@ -647,11 +647,11 @@ export default class Navigation {
      */
     if (this.viewport.vertical) {
       if (this.focused) {
-        cursorX = this.viewport.width - 80;
-        cursorY = 80;
+        this.cursors.x = this.viewport.width - 80;
+        this.cursors.y = 80;
       } else {
-        cursorX = this.viewport.width - 80;
-        cursorY = this.viewport.height * 0.4;
+        this.cursors.x = this.viewport.width - 80;
+        this.cursors.y = this.viewport.height * 0.4;
       }
     } else {
       this.cursors.x = this.mouse.screen.x;

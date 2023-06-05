@@ -24,7 +24,7 @@ export default class Model {
 
     this.models = _models;
     this.name = _name;
-    this.hideDistance = 10;
+    this.hideDistance = 11;
     this.shown = false;
     this.onScreen = false;
 
@@ -547,7 +547,7 @@ export default class Model {
         y: forward ? -this.hideDistance : this.hideDistance,
       },
       {
-        y: 2,
+        y: this.viewport.width < 400 ? 0 : 2,
         duration: 1,
         ease: "power2.out",
         delay: delay,
@@ -567,9 +567,6 @@ export default class Model {
       {
         y: 0,
         x: 0,
-        duration: 1,
-        ease: "power2.out",
-        delay: delay,
       }
     );
   }
