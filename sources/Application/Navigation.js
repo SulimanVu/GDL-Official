@@ -28,6 +28,7 @@ export default class Navigation {
     this.setCursors();
     this.setMainLogo();
     this.setJoin();
+    this.setDropDown();
     this.setFavicons();
 
     this.experience.resources.on("groupEnd", (_group) => {
@@ -79,6 +80,7 @@ export default class Navigation {
       this.mainLogo.headerContainer.appendChild(this.mainLogo.element);
       this.mainLogo.headerContainer.classList.add("is-visible");
       this.join.element.classList.add("is-visible");
+      this.drop_down.element.classList.add("is-visible");
     });
   }
 
@@ -309,7 +311,10 @@ export default class Navigation {
     this.join = {};
     this.join.element = document.querySelector(".js-join");
   }
-
+  setDropDown() {
+    this.drop_down = {};
+    this.drop_down.element = document.querySelector(".js-drop-down");
+  }
   setFavicons() {
     this.favicons = {};
     this.favicons.elements = document.querySelectorAll(".js-favicon");
@@ -577,6 +582,7 @@ export default class Navigation {
 
     // Join
     this.join.element.classList.add("is-leaving");
+    this.drop_down.element.classList.add("is-leaving");
   }
 
   leaveFocus() {
@@ -635,6 +641,7 @@ export default class Navigation {
 
       // Join
       this.join.element.classList.remove("is-leaving");
+      this.drop_down.element.classList.remove("is-leaving");
 
       // Scroll down
       if (!this.navigatedOnce) this.scrollDown.show();

@@ -107,6 +107,10 @@
     /> -->
     <meta name="theme-color" content="#ffffff" />
 
+    <script
+      type="module"
+      src="./sources/Application/Language/Language.js"
+    ></script>
     <script type="module" src="./sources/index.js"></script>
     <!-- <link rel="modulepreload" href="./assets/vendor.js" /> -->
     <link rel="stylesheet" href="./sources/index.css" />
@@ -503,22 +507,43 @@
     <div class="main-logo-header js-main-logo-header"></div>
 
     <!-- Join us -->
-    <a
-      href="https://workwithscout.com"
-      target="_blank"
-      class="join pill-button is-big js-link js-join"
-    >
-      <div class="background">
-        <div class="left"><div class="plain"></div></div>
-        <div class="right"><div class="plain"></div></div>
-      </div>
-      <div class="label">
-        <div class="icon">
-          <div class="circle"></div>
+    <header>
+      <div class="drop_down js-drop-down">
+        <button data-key="lang" class="toggle">lang</button>
+        <div class="items">
+          <div class="lng list-item" data-lang="en">
+            <div class="list-flex">
+              <img src="./sources/Application/icons/usa.png" alt="en" />
+              <span>en</span>
+            </div>
+          </div>
+          <div class="lng list-item" data-lang="ru">
+            <div class="list-flex">
+              <img src="./sources/Application/icons/russia.png" alt="ru" />
+              <span>ru</span>
+            </div>
+          </div>
+          <div class="lng list-item" data-lang="de">
+            <div class="list-flex">
+              <img src="./sources/Application/icons/germany.png" alt="de" />
+              <span>de</span>
+            </div>
+          </div>
         </div>
-        build with us
       </div>
-    </a>
+      <nav class="join pill-button is-big js-link js-join">
+        <div class="background">
+          <div class="left"><div class="plain"></div></div>
+          <div class="right"><div class="plain"></div></div>
+        </div>
+        <div class="label">
+          <div class="icon">
+            <div class="circle"></div>
+          </div>
+          build with us
+        </div>
+      </nav>
+    </header>
 
     <!-- Scroll down -->
     <div class="scroll-down-container js-link">
