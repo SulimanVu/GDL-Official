@@ -23,7 +23,7 @@ export default class Models {
     this.scene.add(this.scrollGroup);
 
     this.groupB = new THREE.Group();
-    this.groupB.position.y = -4;
+    this.groupB.position.y = -9;
     this.scrollGroup.add(this.groupB);
 
     this.groupC = new THREE.Group();

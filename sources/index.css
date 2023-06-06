@@ -295,8 +295,7 @@ body {
 }
 
 .pill-button.is-big {
-  padding: 0 2.5rem;
-  height: 3.5rem;
+  padding: 0.5rem 2.5rem;
 }
 
 html.is-mouse .pill-button:hover .background .left .plain,
@@ -655,6 +654,10 @@ html.is-vertical .section.is-content .content {
   line-height: 1.4em;
   font-size: 0.85em;
   color: #fffb;
+  padding-right: 5px;
+  box-sizing: border-box;
+  margin-left: 3px;
+  word-wrap: break-word;
 }
 
 .section.is-content .main-link {
@@ -1580,6 +1583,10 @@ html.is-intro-leaving .main-intro .text > span > span.delay-8 {
   transition-delay: 0.48s;
 }
 
+html.is-intro-leaving .main-intro .text > span > span.delay-9 {
+  transition-delay: 0.54s;
+}
+
 html.is-intro-leaving .main-intro .main-logo-loader {
   opacity: 0;
   transform: translateY(-35px);
@@ -1648,6 +1655,10 @@ html.is-intro-leaving .main-intro .main-logo-loader {
 
 .main-intro .text > span > span.delay-8 {
   transition-delay: 0.72s;
+}
+
+.main-intro .text > span > span.delay-9 {
+  transition-delay: 0.81s;
 }
 
 .main-intro .main-logo-loader {

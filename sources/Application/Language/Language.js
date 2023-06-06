@@ -1,15 +1,70 @@
 import gsap from "gsap";
 
 const langs = {
-  head: {
-    ru: "русский",
-    en: "english",
-    de: "doitch",
+  IT_head: {
+    ru: "IT Отдел",
+    en: "IT Department",
+    de: "IT Abteilung",
   },
-  title: {
-    ru: "картельные сговоры не допускают ситуации, при которой сделанные на базе интернет-аналитики выводы будут ассоциативно распределены по отраслям. Как принято считать, независимые государства, превозмогая сложившуюся непростую экономи",
-    en: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
-    de: "es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit Lorem Ipsum als den Standardtext,",
+  Drei_head: {
+    ru: "3D Отдел",
+    en: "3D Department",
+    de: "3D Abteilung",
+  },
+  IT_title: {
+    ru: "Удобные для пользователей веб-сайты и приложения, которые бесперебойно функционируют на любой платформе, специально разработанные в соответствии с требованиями вашего бизнеса. Получите непревзойденное преимущество на рынке, используя новейшие технологии, запрограммированные нашей командой для вас.",
+    en: "User-friendly websites and apps that run smoothly on any platform, custom-designed to meet your business needs. Gain an unrivaled market advantage with the latest technology programmed by our team for you.",
+    de: "Benutzerfreundliche Websites und Apps, die auf jeder Plattform reibungslos funktionieren und individuell auf Ihre Geschäftsanforderungen zugeschnitten sind. Verschaffen Sie sich einen unübertroffenen Marktvorteil mit der neuesten Technologie, die unser Team für Sie programmiert.",
+  },
+  Drei_title: {
+    ru: "Выделитесь из толпы с помощью презентаций продуктов. Мощные. Динамичные. Инновационные. Придайте своему бренду неповторимый характер с помощью захватывающих фильмов и анимации",
+    en: "Stand out from the crowd with product presentations. Powerful. Dynamic. Innovative. Give your brand a unique character with breathtaking films and animations",
+    de: "Heben Sie sich mit Produktpräsentationen von der Masse ab. Kraftvoll. Dynamisch. Innovativ. Verleihen Sie Ihrer Marke mit atemberaubenden Filmen und Animationen einen einzigartigen Charakter",
+  },
+  features_web: {
+    ru: "Веб-сайты",
+    en: "Web sites",
+    de: "Websites",
+  },
+  features_mobile: {
+    ru: "Мобильные приложения",
+    en: "Mobile applications",
+    de: "Mobile Anwendungen",
+  },
+  features_server: {
+    ru: "Серверные приложения",
+    en: "Server applications",
+    de: "Serveranwendungen",
+  },
+  features_digital: {
+    ru: "Цифровое страхование",
+    en: "Digital Insurance",
+    de: "Digitale Versicherung",
+  },
+  features_animation: {
+    ru: "Анимация продуктов",
+    en: "Product Animation",
+    de: "Produktanimation",
+  },
+  features_cartoons: {
+    ru: "3D-Мультфильмы",
+    en: "3D-Cartoons",
+    de: "3D-Cartoons",
+  },
+  features_films: {
+    ru: "Имиджевые фильмы",
+    en: "Image films",
+    de: "Imagefilme",
+  },
+  features_social: {
+    ru: "Социальные ролики",
+    en: "Social videos",
+    de: "Soziale Videos",
+  },
+  btn_consultation: {
+    ru: "Консультация",
+    en: "Consultation",
+    de: "Beratung",
   },
   button: {
     ru: "перейти",
@@ -20,6 +75,11 @@ const langs = {
     ru: "ru",
     en: "en",
     de: "de",
+  },
+  next_prod: {
+    ru: "Следующий продукт",
+    en: "Next product",
+    de: "Nächstes Produkt",
   },
 };
 
