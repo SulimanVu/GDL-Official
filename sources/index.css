@@ -2040,7 +2040,9 @@ html.is-vertical .main-logo-header.is-leaving {
   cursor: pointer;
   z-index: 2;
 }
-
+.toggle img{
+  width: 1.25rem;
+}
 .toggle::after {
   content: "";
   width: 6px;

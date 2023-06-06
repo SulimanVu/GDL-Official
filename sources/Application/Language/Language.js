@@ -1,6 +1,11 @@
 import gsap from "gsap";
 
 const langs = {
+  flag: {
+    ru: "./sources/Application/icons/russia.png",
+    en: "./sources/Application/icons/usa.png",
+    de: "./sources/Application/icons/germany.png",
+  },
   IT_head: {
     ru: "IT Отдел",
     en: "IT Department",
@@ -103,6 +108,11 @@ function updateContent(event) {
   elements.forEach((elem) => {
     const key = elem.getAttribute("data-key");
     elem.innerHTML = langs[key][lang];
+
+    if (elem.getAttribute("class") == "flag") {
+      elem.setAttribute("src", langs[key][lang]);
+    }
+    
   });
   toggleLangModal(event);
 }
