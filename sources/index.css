@@ -636,6 +636,10 @@ html.is-vertical .section.is-content .content {
   justify-content: center;
 }
 
+.section.is-content .features .feature .icon-container .icon-inner img {
+  fill: #fff;
+}
+
 @media (max-width: 1600px) {
   .section.is-content .features .feature .icon-container .icon-inner img {
     width: 35%;
@@ -2040,7 +2044,7 @@ html.is-vertical .main-logo-header.is-leaving {
   cursor: pointer;
   z-index: 2;
 }
-.toggle img{
+.toggle img {
   width: 1.25rem;
 }
 .toggle::after {
