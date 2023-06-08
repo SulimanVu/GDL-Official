@@ -156,24 +156,6 @@ export default class Navigation {
         ),
         model: this.render.models.items.get("isonline"),
       },
-      {
-        name: "ideasby",
-        color: "f9d77f",
-        canFocus: true,
-        element: sectionElements.find((_element) =>
-          _element.classList.contains("is-ideasby")
-        ),
-        model: this.render.models.items.get("ideasby"),
-      },
-      {
-        name: "takemeto",
-        color: "ffffff",
-        canFocus: true,
-        element: sectionElements.find((_element) =>
-          _element.classList.contains("is-takemeto")
-        ),
-        model: this.render.models.items.get("takemeto"),
-      },
     ];
   }
 

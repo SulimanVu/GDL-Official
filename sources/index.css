@@ -415,14 +415,6 @@ html.is-vertical.is-focused .sections {
   --section-color: #f2acf2;
 }
 
-.section.is-ideasby {
-  --section-color: #f9d77f;
-}
-
-.section.is-takemeto {
-  --section-color: #fff;
-}
-
 .section *::selection {
   background: var(--section-color);
 }
@@ -1144,14 +1136,6 @@ html.is-section-onscout .cursor .big .background {
 
 html.is-section-isonline .cursor .big .background {
   background-color: #f2acf2;
-}
-
-html.is-section-ideasby .cursor .big .background {
-  background-color: #f9d77f;
-}
-
-html.is-section-takemeto .cursor .big .background {
-  background-color: #f9d77f;
 }
 
 .cursor .big .plus-icon {

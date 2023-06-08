@@ -330,44 +330,6 @@ export default class Model {
     //       color: "#ffffff",
     //     });
     //     break;
-    //   case "ideasby":
-    //     this.materials.stickerSmiley.color.set("#473824");
-    //     this.materials.stickerScout.color.set("#db8d1f");
-    //     this.materials.stickerBottom.color.set("#db8d1f");
-    //     this.materials.bulbScrew = new THREE.MeshStandardMaterial({
-    //       metalness: 1,
-    //       roughness: 0.3,
-    //       color: "#cccccc",
-    //     });
-    //     this.materials.bulbPin = new THREE.MeshStandardMaterial({
-    //       metalness: 1,
-    //       roughness: 0.2,
-    //       color: "#AEAEAE",
-    //     });
-    //     this.materials.bulbTip = new THREE.MeshStandardMaterial({
-    //       metalness: 0,
-    //       roughness: 0.553,
-    //       color: "#4D4D4D",
-    //     });
-    //     this.materials.bulbGlow = new GlowMaterial();
-    //     this.materials.bulbGlass = new THREE.MeshStandardMaterial({
-    //       color: 0xffffff,
-    //       metalness: 1,
-    //       roughness: 0.15,
-    //       opacity: 0.35,
-    //       transparent: true,
-    //     });
-    //     break;
-    //   case "takemeto":
-    //     this.materials.stickerSmiley.color.set("#333333");
-    //     this.materials.stickerScout.color.set("#ffffff");
-    //     this.materials.stickerBottom.color.set("#ffffff");
-    //     this.materials.socials = new THREE.MeshStandardMaterial({
-    //       metalness: 0.2,
-    //       roughness: 0.5,
-    //       map: this.textures.socials,
-    //     });
-    //     break;
     // }
 
     // for (const _materialKey in this.materials) {

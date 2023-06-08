@@ -61,27 +61,4 @@ export default [
         // { name: 'switchGradientTexture', source: '/models/textures/switchGradient.png', type: 'texture' },
       ]
   },
-  {
-    name: 'ideasby',
-    data: { isModel: true },
-    itemsToLoad:
-      [
-        { name: 'model', source: '../../../models/GDL.gltf' },
-        // { name: 'stickerBottomTexture', source: '/models/textures/stickerBottom02.png', type: 'texture' },
-        // { name: 'stickerDescriptionTexture', source: '/models/textures/ideasbyDescription.png', type: 'texture' },
-        // { name: 'stickerTitleTexture', source: '/models/textures/ideasbyTitle.png', type: 'texture' },
-      ]
-  },
-  {
-    name: 'takemeto',
-    data: { isModel: true },
-    itemsToLoad:
-      [
-        { name: 'model', source: '../../../models/GDL.gltf' },
-        // { name: 'stickerBottomTexture', source: '/models/textures/stickerBottom01.png', type: 'texture' },
-        // { name: 'stickerDescriptionTexture', source: '/models/textures/takemetoDescription.png', type: 'texture' },
-        // { name: 'stickerTitleTexture', source: '/models/textures/takemetoTitle.png', type: 'texture' },
-        // { name: 'socialsTexture', source: '/models/textures/socials.png', type: 'texture' },
-      ]
-  },
 ]

@@ -153,8 +153,6 @@ export default class Models {
     this.items.set("privatekey", new Model(this, "privatekey"));
     this.items.set("onscout", new Model(this, "onscout"));
     this.items.set("isonline", new Model(this, "isonline"));
-    this.items.set("ideasby", new Model(this, "ideasby"));
-    this.items.set("takemeto", new Model(this, "takemeto"));
   }
 
   setDebug() {
