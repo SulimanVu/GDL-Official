@@ -408,7 +408,7 @@ html.is-vertical.is-focused .sections {
 }
 
 .section.is-onscout {
-  --section-color: #fff;
+  --section-color: #f9d77f;
 }
 
 .section.is-isonline {
@@ -1139,7 +1139,7 @@ html.is-section-privatekey .cursor .big .background {
 }
 
 html.is-section-onscout .cursor .big .background {
-  background-color: #fff;
+  background-color: #f9d77f;
 }
 
 html.is-section-isonline .cursor .big .background {
@@ -1151,7 +1151,7 @@ html.is-section-ideasby .cursor .big .background {
 }
 
 html.is-section-takemeto .cursor .big .background {
-  background-color: #fff;
+  background-color: #f9d77f;
 }
 
 .cursor .big .plus-icon {
