@@ -26,15 +26,38 @@
       type="module"
       src="./sources/Application/Language/Language.js"
     ></script>
+    <script type="module" src="./sources/Request/RequestModal.js"></script>
     <script type="module" src="./sources/index.js"></script>
     <!-- <link rel="modulepreload" href="./assets/vendor.js" /> -->
     <link rel="stylesheet" href="./sources/index.css" />
+    <link rel="stylesheet" href="./sources/Request/requestModal.css" />
   </head>
 
   <body>
     <!-- Experience -->
     <div class="experience"></div>
 
+    <!-- RequestModal -->
+    <div class="request_main">
+      <form class="requestModal">
+        <span class="requestTitle"
+          >ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ В БЛИЖАЙШЕЕ ВРЕМЯ!</span
+        >
+        <input type="text" placeholder="ФИО" />
+
+        <input type="tel" placeholder="Телефон" id="tel" />
+        <span class="telTitle">Не правильно введен Номер телефона</span>
+
+        <input type="email" placeholder="E-mail" id="email" />
+        <span class="emailTitle">Не правильно введен email</span>
+
+        <button class="submitButton" type="submit">ОТПРАВИТЬ</button>
+      </form>
+      <div class="success">
+        <span>ВАША ЗАЯВКА БЫЛА ОТПРАВЛЕНА</span>
+        <img src="./sources/Application/icons/success.png" alt="success" />
+      </div>
+    </div>
     <!-- Sections -->
     <main class="sections js-sections">
       <!-- Content: Crew -->
@@ -337,9 +360,9 @@
     <!-- Main intro -->
     <div class="main-intro js-main-intro">
       <div class="text">
-          <video muted="muted" autoplay="autoplay" width="600" height="400">
-            <source src="./sources/Comp 1.mp4" />
-          </video>
+        <video muted="muted" autoplay="autoplay" width="600" height="400">
+          <source src="./sources/Comp 1.mp4" />
+        </video>
       </div>
       <div class="main-logo-loader js-main-logo-loader">
         <a href="#" class="main-logo js-main-logo js-link">
@@ -393,7 +416,9 @@
           <div class="icon">
             <div class="circle"></div>
           </div>
-          <span data-key="btn_consultation">build with us</span>
+          <span class="openModal" data-key="btn_consultation"
+            >build with us</span
+          >
         </div>
       </nav>
     </header>
