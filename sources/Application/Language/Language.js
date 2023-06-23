@@ -148,17 +148,11 @@ const langs = {
   },
 };
 
-const body = document.body;
 const divs = document.querySelectorAll(".lng");
 
 divs.forEach((div) => {
   div.addEventListener("click", updateContent);
 });
-
-// fetch("./langArr.json")
-//   .then((response) => response.json())
-//   .then((data) => {} )
-//   .catch((error) => console.error("Error:", error));
 
 function updateContent(event) {
   const lang = event.currentTarget.getAttribute("data-lang");

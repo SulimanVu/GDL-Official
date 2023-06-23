@@ -589,6 +589,8 @@ export default class Model {
       this.groupA.position.y < this.hideDistance * 0.9 &&
       this.groupA.position.y > -this.hideDistance * 0.9;
 
+
+    // Настройка положения 3d объекта в кадре
     if (this.onScreen) {
       // Permanent rotation
       if (this.autoRotate && this.boxModel) {
@@ -598,7 +600,7 @@ export default class Model {
             Math.sin(this.time.elapsed * 0.789) *
             0.15;
         this.boxModel.rotation.x =
-          0.2 +
+          1.2 +
           Math.sin(this.time.elapsed * 0.456) *
             Math.sin(this.time.elapsed * 0.123) *
             0.07;

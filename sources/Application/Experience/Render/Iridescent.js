@@ -11,7 +11,7 @@ export default class Iridescent {
     this.time = this.experience.time;
     this.resources = this.experience.resources;
 
-    // Options
+    // Options bumpmap
     this.debugPath = _options.debugPath;
     this.texture = _options.texture;
     this.color = _options.color ?? "#ffffff";
@@ -93,7 +93,7 @@ export default class Iridescent {
       color: this.color,
       metalness: this.metalness,
       roughness: this.roughness,
-      bumpMap: this.bumpTexture,
+      // bumpMap: this.bumpTexture,
       bumpScale: this.bumpScale,
     });
 

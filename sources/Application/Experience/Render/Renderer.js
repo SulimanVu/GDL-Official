@@ -48,8 +48,9 @@ export default class Renderer {
     );
     this.instance.setPixelRatio(this.viewport.clampedPixelRatio);
 
-    this.instance.physicallyCorrectLights = true;
-    this.instance.outputEncoding = THREE.sRGBEncoding;
+    
+    this.instance.useLegacyLights = false;
+    // this.instance.outputEncoding = THREE.sRGBEncoding;
     this.instance.shadowMap.enabled = this.experience.quality === "high";
     this.instance.shadowMap.type = THREE.PCFSoftShadowMap;
     this.instance.toneMapping = THREE.CineonToneMapping;
@@ -182,7 +183,7 @@ void main() {
         minFilter: THREE.LinearFilter,
         magFilter: THREE.LinearFilter,
         format: THREE.RGBAFormat,
-        encoding: THREE.sRGBEncoding,
+        // colorSpace: THREE.sRGBEncoding,
       }
     );
     this.postProcess.composer = new EffectComposer(

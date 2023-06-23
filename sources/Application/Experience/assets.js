@@ -19,7 +19,7 @@ export default [
     data: { isModel: true },
     itemsToLoad:
       [
-        { name: 'model', source: '../../../models/GDL.gltf' },
+        { name: 'model', source: '../../../models/IT.gltf' },
         // { name: 'stickerBottomTexture', source: '/models/textures/stickerBottom06.png', type: 'texture' },
         // { name: 'stickerDescriptionTexture', source: '/models/textures/crewDescription.png', type: 'texture' },
         // { name: 'stickerTitleTexture', source: '/models/textures/crewTitle.png', type: 'texture' },
@@ -30,7 +30,7 @@ export default [
     data: { isModel: true },
     itemsToLoad:
       [
-        { name: 'model', source: '../../../models/GDL.gltf' },
+        { name: 'model', source: '../../../models/3D.gltf' },
         // { name: 'stickerBottomTexture', source: '/models/textures/stickerBottom05.png', type: 'texture' },
         // { name: 'stickerDescriptionTexture', source: '/models/textures/privatekeyDescription.png', type: 'texture' },
         // { name: 'stickerTitleTexture', source: '/models/textures/privatekeyTitle.png', type: 'texture' },
@@ -41,7 +41,7 @@ export default [
     data: { isModel: true },
     itemsToLoad:
       [
-        { name: 'model', source: '../../../models/GDL.gltf' },
+        { name: 'model', source: '../../../models/GameDev.gltf' },
         // { name: 'stickerBottomTexture', source: '/models/textures/stickerBottom04.png', type: 'texture' },
         // { name: 'stickerDescriptionTexture', source: '/models/textures/onscoutDescription.png', type: 'texture' },
         // { name: 'stickerTitleTexture', source: '/models/textures/onscoutTitle.png', type: 'texture' },
@@ -54,7 +54,7 @@ export default [
     data: { isModel: true },
     itemsToLoad:
       [
-        { name: 'model', source: '../../../models/GDL.gltf' },
+        { name: 'model', source: '../../../models/GraphicDesign.gltf' },
         // { name: 'stickerBottomTexture', source: '/models/textures/stickerBottom03.png', type: 'texture' },
         // { name: 'stickerDescriptionTexture', source: '/models/textures/isonlineDescription.png', type: 'texture' },
         // { name: 'stickerTitleTexture', source: '/models/textures/isonlineTitle.png', type: 'texture' },

@@ -93,7 +93,7 @@ submitButton.addEventListener("click", () => {
   let inputsValue = 0;
 
   for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value != "") {
+    if (inputs[i].getAttribute("class") != "error" && inputs[i].value != "") {
       inputsValue = inputsValue + 1;
     }
     if (inputs[i].getAttribute("class") == "error" || inputs[i].value == "") {
